@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница регистрации</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+</head>
+<body>
+    <div class="reg_back">
+        <form method="post">
+            <h1>Регистрация пользователя!</h1>
+
+            <input class="text_log" type="text" name="username" placeholder="Логин">
+            <br>
+            <input class="text_pas" type="password" name="password" placeholder="Пароль">
+            <br>
+            <input class="text_name" type="text" name="text_name" placeholder="Ваше имя">
+            <br>
+            <input class="avatar" type="text" name="avatar" placeholder="Ссылка на ваш аватар">
+            <br>
+            <input class="contact" type="text" name="contact" placeholder="Контактные данные">
+            <br>
+            <input class="about" type="text" name="about" placeholder="О себе">
+            <br>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+
+        <div>
+            {% for error in errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+
+        <a class="exit_but" href="{{ url_for('index') }}">Назад</a>
+
+        <footer>
+            &copy; Малкова Арина Олеговна, ФБИ-11
+        </footer>
+        
+    </div>
+</body>
+</html>

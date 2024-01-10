@@ -1,0 +1,332 @@
+body {
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    background: url('https://txtrs.ru/textures/cork/cork-7.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+form {
+    margin-bottom: 20px;
+  }
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  } 
+
+.menu {
+    background-color: rgb(255, 216, 103);
+    padding: 40px;
+    width: 962px;
+    margin-top: 0px;
+    position: absolute;
+    top: 0px;
+    left: 17%;
+  }
+
+.links {
+    background-color: saddlebrown;
+    position: absolute;
+    width: 1042px;
+    height: 55px;
+    right: 0px;
+    top: 0px;
+    text-align: right;
+    }
+
+.message_main {
+    position: absolute;
+    left: 25px;
+    top: 68px;
+    width: 186px;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding: 4px;
+}
+
+.profile_but {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: rgb(164, 149, 2);
+  color: white;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-top: 6px;
+}
+  
+.profile_but:hover {    
+  background-color: #cee752;  
+}
+
+.username {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    text-align: left;
+    left: 320px;
+  }
+
+.auth {
+    position: sticky;
+    right: 1200px;
+  }
+
+.auth_back {
+  background-color: rgb(46, 108, 116);
+  margin: 40px;
+  padding: 40px;
+  text-align: center;
+  border-radius: 228px;
+  }
+
+.text_log {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+.text_pas {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+.text_name {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.about {
+    width: 20%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.exit_but{
+  background-color: rgb(234, 87, 87);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.index_ad {
+  border-style: double;
+}
+
+.reg_back {
+    background-color: rgb(46, 108, 116);
+    margin: 40px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 228px;
+  }
+
+.avatar_user {
+  position: absolute;
+  right: 110px;
+  top: 75px;
+  border-style: dashed;
+}
+
+.name_user {
+  position: absolute;
+  right: 135px;
+  top: 333px;
+}
+
+.about_user {
+  position: absolute;
+  right: 55px;
+  top: 370px;
+  width: 273px;
+  height: auto;
+  word-break: break-word;
+}
+
+.info {
+  background-color: rgb(68, 120, 120);
+  height: 485px;
+  border-end-end-radius: 100px;
+  border-bottom-left-radius: 100px;
+  position: absolute;
+  width: 1042px;
+  left: 0px;
+  top: 0px;
+}
+
+.cre_back {
+  background-color: rgb(229, 235, 190);
+  margin: 40px;
+  padding: 40px;
+  text-align: center;
+  width: 628px;
+  border-radius: 103px;
+  margin-left: 25%;
+}
+
+.subject_ad {
+  font-size: 16px;
+  color: azure;
+}
+
+.adv {
+  position: absolute;
+  height: auto;
+  width: 220px;
+  top: 99px;
+  background-color: rgb(191, 121, 66);
+  border-radius: 50px;
+  left: 80px;
+}
+
+.states {
+  position: absolute;
+  left: 2px;
+  top: -25px;
+  font-size: 23px;
+  color: azure;
+  font-family: Arial Black;
+  background-color: rgb(221, 146, 87);
+  width: 201px;
+  text-align: center;
+  border-radius: 23px;
+}
+
+.buttons_account {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  background-color: blanchedalmond;
+  padding: 29px;
+  border-radius: 46px;
+  width: 15%;
+  font-family: Ayuthaya;
+}
+
+.buttons_account_adm {
+  position: absolute;
+  width: 249px;
+  margin-top: -59px;
+  margin-left: -49px;
+  background-color: beige;
+  text-align: center;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+ul {
+    list-style-type:  none;
+}
+
+.text_search {
+    width: 31%;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-right: 12px;
+    border-radius: 20px;
+    border-color: aquamarine;
+}
+
+.select {
+    height: 36px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #1cc976;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 4px 4px #ccc;
+}
+
+.user_name {
+    position: absolute;
+    left: 25px;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #08550c;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin-right: 25px;
+    margin-top: 6px;
+}
+
+.admin_but {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #52b2c2;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    margin: 6px;
+}
+
+.admin {
+    color: #08550c;
+    position: absolute;
+    left: -236px;
+    background-color: aliceblue;
+    padding: 10px;
+    width: 197px;
+    text-align: center;
+}
+
+.ot_do {
+    color: #08550c;
+}
+
+.main_page {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.glav_str {
+    position: absolute;
+    top: -13px;
+    color: white
+}
+
+.ser_str {
+    margin-right: 25px;
+    color: white;
+    font-size: 30px;
+}
+
+footer{
+  margin-top: 20px;
+  padding: 10px;
+  background: #E59E6D;
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

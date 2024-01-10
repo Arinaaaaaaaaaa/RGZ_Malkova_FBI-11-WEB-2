@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="links">
+            {% if current_user.is_authenticated %}
+            <div class="links">
+                <a class="profile_but">Вы вошли как: {{ current_user.username }}</a>
+                <a class="profile_but" href="{{ url_for('account') }}">Личный кабинет</a>
+                <a href="{{ url_for('logout') }}" class="profile_but">Выйти</a>
+            </div>
+            {% else %}
+            <div class="links">
+                <a href="{{ url_for('account') }}" class="profile_but">Личный кабинет</a>
+                <a href="{{ url_for('login') }}" class="profile_but">Войти</a>
+                <a href="{{ url_for('register') }}" class="profile_but">Регистрация</a>
+            </div>
+            <div class="message_main">
+                Для публикации объявлений необходима
+                <a href="{{ url_for('login') }}">авторизация</a>
+            </div>
+            {% endif %}
+        </div>
+        <div class="glav_str"><h1>Доска объявлений</h1></div>
+        <div class="main_page">
+            {% if desk %}
+                <ul>
+                    {% for i in desk %}
+                        <li class="index_ad">
+                            <p><img src="{{ i.photo }}" alt="{{ i.subject }}" width="400"></p>
+                            <h2>{{ i.subject }}</h2>
+                            <p>Объявление: {{ i.main_text }}</p>
+                            <p>Автор: {{ i.author_name }}</p>
+                            {% if current_user.is_authenticated %}
+                                <p>Почта: {{ i.email }}</p>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+               <p>В данный момент нет объявлений</p>
+            {% endif %}
+        </div>
+        <footer>
+            &copy; Малкова Арина Олеговна, ФБИ-11
+        </footer>
+    </div>
+</body>
+</html>

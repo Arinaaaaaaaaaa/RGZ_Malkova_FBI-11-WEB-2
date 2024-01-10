@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+</head>
+<body>
+    <div class="menu">
+        <div class="info">
+            <div class="links">
+                <a class="profile_but">Вы вошли как: {{ current_user.username }}</a>
+                <a href="{{ url_for('index') }}" class="profile_but">Главная страница</a>
+                <a href="{{ url_for('logout') }}" class="profile_but">Выйти</a>
+            </div>
+            <div class="name_user">
+                Имя пользователя: {{ name_user.name }}
+            </div>
+            <div class="avatar_user">
+                <img src="{{ name_user.avatar }}" alt="{{ name_user.name }}" width="150">
+            </div>
+            <div class="about_user">
+                Информация о пользователе: <br>
+                {{ name_user.about }}
+            </div>
+
+            <div class="adv">
+                <div class="states">Ваши статьи:</div>
+                {% if adv %}
+                <ul>
+                    {% for i in adv %}
+                        <li class="subject_ad">
+                            <h2>{{ i.subject }}</h2>
+                        </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                    <p style="margin-left: 15px;">У вас нет созданных объявлений!</p>
+                {% endif %}
+            </div>
+
+            <div class="buttons_account">
+                {% if current_user.username == 'arina' %}
+                    <div class="buttons_account_adm">
+                        Вы администратор!
+                        <a href="{{ url_for('create') }}" class="profile_but">Создать объявление</a>
+                        <a href="{{ url_for('edit') }}" class="profile_but">Изменить объявление</a>
+                        <a href="{{ url_for('delete_adv') }}" class="profile_but">Удалить объявление</a>
+                        <a href="{{ url_for('edit_user') }}" class="profile_but">Изменить пользователя</a>
+                        <a href="{{ url_for('delete_user') }}" class="profile_but">Удалить пользователя</a>
+                    </div>
+                {% elif adv %}
+                    <a href="{{ url_for('create') }}" class="profile_but">Создать объявление</a>
+                    <a href="{{ url_for('edit') }}" class="profile_but">Изменить объявление</a>
+                    <a href="{{ url_for('delete') }}" class="profile_but">Удалить объявление</a>
+                {% else %}
+                    <p>У вас нет созданных объявлений!</p>
+                    <a href="{{ url_for('create') }}" class="profile_but">Создать объявление</a>
+                {% endif %}
+            </div>
+
+            <footer>
+                &copy; Малкова Арина Олеговна, ФБИ-11
+            </footer>
+            
+        </div>
+
+        <div class="glav_str"><h1>Личный кабинет</h1></div>
+
+    </div>
+</body>
+</html>

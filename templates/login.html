@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Страница авторизации</title>
+    <link rel="stylesheet" type="text/css" href="/static/main.css">
+</head>
+<body>
+    <div class="auth_back">
+        <h1>Страница авторизации</h1>
+    
+        <div class="auth">
+            <form method="POST" action="{{ url_for('login') }}">
+                <input class="text_log" type="text" name="username" placeholder="Логин">
+                <br>
+                <input class="text_pas" type="password" name="password" placeholder="Пароль">
+                <br>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+
+        <div>
+            {% for error in errors %}
+                {{ error }}
+            {% endfor %}
+        </div>
+
+        <a class="exit_but" href="{{ url_for('index') }}">На главную</a>
+
+        <footer>
+            &copy; Малкова Арина Олеговна, ФБИ-11
+        </footer>
+        
+    </div>
+</body>
+</html>
